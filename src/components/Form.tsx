@@ -1,8 +1,13 @@
+import { FormEvent } from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const Form = () => {
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    console.log("Submitted");
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
